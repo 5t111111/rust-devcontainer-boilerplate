@@ -61,13 +61,15 @@ shopt -u dotglob  # Disable it again to restore default behavior
 # Remove the now-empty directory
 rm -r "$project_name/rust-devcontainer-template-main"
 
-# Replace 'rust-devcontainer-template' with the project name in compose.yaml and launch.json
+# Replace 'rust-devcontainer-template' with the project name in compose.yaml, launch.json and Cargo.toml
 if [[ "$(uname)" == "Darwin" ]]; then
   sed -i '' "s/rust-devcontainer-template/$project_name/g" "$project_name/.devcontainer/compose.yaml"
   sed -i '' "s/rust-devcontainer-template/$project_name/g" "$project_name/.vscode/launch.json"
+  sed -i '' "s/rust-devcontainer-template/$project_name/g" "$project_name/Cargo.toml"
 else
   sed -i "s/rust-devcontainer-template/$project_name/g" "$project_name/.devcontainer/compose.yaml"
   sed -i "s/rust-devcontainer-template/$project_name/g" "$project_name/.vscode/launch.json"
+  sed -i "s/rust-devcontainer-template/$project_name/g" "$project_name/Cargo.toml"
 fi
 
 # Overwrite README.md with the project name
