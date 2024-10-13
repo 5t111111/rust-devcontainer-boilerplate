@@ -1,0 +1,39 @@
+{
+    "name": "${localWorkspaceFolderBasename}",
+    "dockerComposeFile": [
+        "compose.yaml"
+    ],
+    "service": "devcontainer",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "features": {
+        // https://github.com/devcontainers/features/tree/main/src/common-utils
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "configureZshAsDefaultShell": true,
+            "username": "rust",
+            "userUid": "1000",
+            "userGid": "1000"
+        },
+        // https://github.com/devcontainers/features/tree/main/src/git
+        "ghcr.io/devcontainers/features/git:1": {
+            "ppa": true
+        },
+        // https://github.com/devcontainers/features/tree/main/src/rust
+        "ghcr.io/devcontainers/features/rust:1": {
+            "version": "latest",
+            "profile": "default"
+        },
+        // https://github.com/5t111111/devcontainers-features/tree/main/src/rust-extra
+        "ghcr.io/5t111111/devcontainers-features/rust-extra:0": {}
+    },
+    "initializeCommand": ".devcontainer/initialize_command.sh",
+    "postStartCommand": "sudo git config --system --add safe.directory ${containerWorkspaceFolder}",
+    "postCreateCommand": "echo \"Rust version: $(rustc --version)\"",
+    "remoteUser": "rust",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "rust-analyzer.checkOnSave.command": "clippy"
+            }
+        }
+    }
+}
