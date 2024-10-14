@@ -47,19 +47,13 @@ fi
 echo -e "${CYAN}Setting up the project...${NC}"
 curl -L -o template.zip https://github.com/5t111111/rust-devcontainer-template/archive/refs/heads/main.zip > /dev/null 2>&1
 
-# Unzip into the project directory, depending on the OS
-mkdir "$project_name"
+# Unzip and copy into the project directory,
+unzip -q template.zip -d "${project_name}_temp"
 
-# Unzip into the project directory, depending on the OS
-unzip -q template.zip -d "$project_name"
-
-# Enable shopt to include hidden files (dotfiles)
-shopt -s dotglob
-mv "$project_name/rust-devcontainer-template-main"/* "$project_name/"
-shopt -u dotglob  # Disable it again to restore default behavior
+mv "${project_name}_temp/deno-devcontainer-template-main" "$project_name"
 
 # Remove the now-empty directory
-rm -r "$project_name/rust-devcontainer-template-main"
+rm -r "${project_name}_temp"
 
 # Replace 'rust-devcontainer-template' with the project name in compose.yaml, launch.json and Cargo.toml
 if [[ "$(uname)" == "Darwin" ]]; then
