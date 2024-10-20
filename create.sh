@@ -50,7 +50,7 @@ curl -L -o template.zip https://github.com/5t111111/rust-devcontainer-template/a
 # Unzip and copy into the project directory,
 unzip -q template.zip -d "${project_name}_temp"
 
-mv "${project_name}_temp/rus-devcontainer-template-main" "$project_name"
+mv "${project_name}_temp/rust-devcontainer-template-main" "$project_name"
 
 # Remove the now-empty directory
 rm -r "${project_name}_temp"
