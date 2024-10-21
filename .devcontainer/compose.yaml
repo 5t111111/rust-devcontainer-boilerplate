@@ -3,8 +3,7 @@ services:
     image: ubuntu:22.04
     init: true
     volumes:
-      - ..:/workspaces/rust-devcontainer-template:cached
-
+      - ..:/workspaces/rust-devcontainer-boilerplate:cached
 # If you are experiencing performance issues during the build when targeting a
 # volume-mounted directory, you can also persist the target to a Docker volume
 # as shown in the following example.
@@ -14,8 +13,8 @@ services:
 #     image: ubuntu:22.04
 #     init: true
 #     volumes:
-#       - ..:/workspaces/rust-devcontainer-template:cached
-#       - cargo-target:/workspaces/rust-devcontainer-template/target
+#       - ..:/workspaces/rust-devcontainer-boilerplate:cached
+#       - cargo-target:/workspaces/rust-devcontainer-boilerplate/target
 #
 # volumes:
 #   cargo-target:

@@ -7,15 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'rust-devcontainer-template'",
+            "name": "Debug executable 'rust-devcontainer-boilerplate'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=rust-devcontainer-template",
-                    "--package=rust-devcontainer-template"
+                    "--bin=rust-devcontainer-boilerplate",
+                    "--package=rust-devcontainer-boilerplate"
                 ],
                 "filter": {
-                    "name": "rust-devcontainer-template",
+                    "name": "rust-devcontainer-boilerplate",
                     "kind": "bin"
                 }
             },
@@ -25,16 +25,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'rust-devcontainer-template'",
+            "name": "Debug unit tests in executable 'rust-devcontainer-boilerplate'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=rust-devcontainer-template",
-                    "--package=rust-devcontainer-template"
+                    "--bin=rust-devcontainer-boilerplate",
+                    "--package=rust-devcontainer-boilerplate"
                 ],
                 "filter": {
-                    "name": "rust-devcontainer-template",
+                    "name": "rust-devcontainer-boilerplate",
                     "kind": "bin"
                 }
             },
