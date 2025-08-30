@@ -8,10 +8,7 @@
     "features": {
         // https://github.com/devcontainers/features/tree/main/src/common-utils
         "ghcr.io/devcontainers/features/common-utils:2": {
-            "configureZshAsDefaultShell": true,
-            "username": "rust",
-            "userUid": "1000",
-            "userGid": "1000"
+            "configureZshAsDefaultShell": true
         },
         // https://github.com/devcontainers/features/tree/main/src/git
         "ghcr.io/devcontainers/features/git:1": {
