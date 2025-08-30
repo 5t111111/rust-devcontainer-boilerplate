@@ -22,8 +22,8 @@
             "version": "latest",
             "profile": "default"
         },
-        // https://github.com/5t111111/devcontainers-features/tree/main/src/rust-extra
-        "ghcr.io/5t111111/devcontainers-features/rust-extra:0": {}
+        // https://github.com/5t111111/devcontainer-features/tree/main/src/rust-extra
+        "ghcr.io/5t111111/devcontainer-features/rust-extra:0": {}
     },
     "initializeCommand": ".devcontainer/initialize_command.sh",
     "postStartCommand": "sudo git config --system --add safe.directory ${containerWorkspaceFolder}",
