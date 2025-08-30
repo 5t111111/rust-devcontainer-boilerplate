@@ -1,6 +1,6 @@
 services:
   devcontainer:
-    image: ubuntu:22.04
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
     init: true
     volumes:
       - ..:/workspaces/rust-devcontainer-boilerplate:cached
@@ -10,7 +10,7 @@ services:
 
 # services:
 #   devcontainer:
-#     image: ubuntu:22.04
+#     image: mcr.microsoft.com/devcontainers/base:ubuntu
 #     init: true
 #     volumes:
 #       - ..:/workspaces/rust-devcontainer-boilerplate:cached
