@@ -25,7 +25,7 @@
     "initializeCommand": ".devcontainer/initialize_command.sh",
     "postStartCommand": "sudo git config --system --add safe.directory ${containerWorkspaceFolder}",
     "postCreateCommand": "echo \"Rust version: $(rustc --version)\"",
-    "remoteUser": "rust",
+    "remoteUser": "vscode",
     "customizations": {
         "vscode": {
             "settings": {
