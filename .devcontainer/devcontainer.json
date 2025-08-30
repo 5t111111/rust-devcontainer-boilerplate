@@ -29,7 +29,7 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "rust-analyzer.checkOnSave.command": "clippy"
+                "rust-analyzer.check.command": "clippy"
             }
         }
     }
